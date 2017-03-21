@@ -6,8 +6,20 @@ keyword in. Your function should take in a single string and return a boolean.
 
 def isVowel( char ):
 
-	str.lower( char )
-	return char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u'
+	# Converting the letter to lowercase for our convenience and hence, we do not need to check character's case and hence, simplifies the problem
+	str.lower( char ) 
+
+	# Splitting the condition: 'a' or 'e'  or 'i' or 'o' or 'u' to make it more readable and easier to understand. 
+	
+	is_char_a = char == 'a'
+	is_char_e = char == 'e'
+	is_char_i = char == 'i'
+	is_char_o = char == 'o'
+	is_char_u = char == 'u'
+
+	is_char_vowel = is_char_a or is_char_e  or is_char_i or is_char_o or is_char_u 
+	
+	return is_char_vowel
 
 def isStringContainsVowel( string ):
 
