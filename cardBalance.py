@@ -44,9 +44,9 @@ def cardBalance( balance, annual_interest_rate, monthly_payment_rate ):
 
 	4. updated_balance_month = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
 	"""
-	balance = int(balance)
-	annual_interest_rate = float(annual_interest_rate)
-	monthly_payment_rate = float(monthly_payment_rate)
+	balance = int( balance )
+	annual_interest_rate = float( annual_interest_rate )
+	monthly_payment_rate = float( monthly_payment_rate )
         
 	monthly_interest_rate = annual_interest_rate / 12.0
 	total_paid = 0
