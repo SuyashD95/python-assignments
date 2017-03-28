@@ -30,6 +30,7 @@ Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 """
 
+# Function STARTS
 def cardBalance( balance, annual_interest_rate, monthly_payment_rate ):
 
 	"""
@@ -61,15 +62,24 @@ def cardBalance( balance, annual_interest_rate, monthly_payment_rate ):
 		updated_balance_month = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
 		balance = updated_balance_month
 
+		# This statement is used to set the precision of a floating point number and converting it into string. (Used in Python 3.6)
+		# Syntax: f"{FLOATING_POINT_VARIABLE:.PRECISIONf}"
+		# Example: f"{minimum_monthly_payment:.2f}"
+
+		# To achieve the same functionality in Python < 3 (e.g 2.7), use the following method:
+		# Syntax: "%.PRECISIONf" % FLOATING_POINT_VARIABLE
+		# Example: "%.2f" % minimum_monthly_payment
+
 		# Output format for each month
 		print( "\nMonth: " + str( month ) )
-		print( "Minimum monthly payment: " + str( minimum_monthly_payment ) )
-		print( "Remaining balance: " + str( balance ) )
+		print( "Minimum monthly payment: " + f"{minimum_monthly_payment:.2f}" )
+		print( "Remaining balance: " + f"{balance:.2f}" )
 
 	# Output format for the whole year
-	print( "\nTotal paid: " + str( total_paid ) )
-	print( "Remaining balance: " + str( balance ) )
+	print( "\nTotal paid: " + f"{total_paid:.2f}" )
+	print( "Remaining balance: " + f"{balance:.2f}" )
 
+# Function ENDS
 
 print( "NOTE TO REMEMBER: Both the ANNUAL INTEREST RATE and MONTHLY PAYMENT RATE needs to be taken as a DECIMAL..." )
 print( "For example:-\n\nIf Annual Interest Rate is 8%, then, the user needs to enter it as:\n\n0.08 which is the result of 8 / 100\n" )
