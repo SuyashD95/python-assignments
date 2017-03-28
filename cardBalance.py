@@ -61,7 +61,7 @@ def cardBalance( balance, annual_interest_rate, monthly_payment_rate ):
 
 
 print( "NOTE TO REMEMBER: Both the ANNUAL INTEREST RATE and MONTHLY PAYMENT RATE needs to be taken as a DECIMAL..." )
-print( "For example:-\n\nIf Annual Interest Rate is 8%, then, the user needs to enter it as:\n0.08 which is the result of 8 / 100\n")
+print( "For example:-\n\nIf Annual Interest Rate is 8%, then, the user needs to enter it as:\n\n0.08 which is the result of 8 / 100\n")
 
 balance = input( "Enter the outstanding balance of the credit card: ")
 annual_interest_rate = input( "Enter the annual interest rate: " )
